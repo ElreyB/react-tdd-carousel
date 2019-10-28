@@ -1,1 +1,3 @@
-export { default as CarouselSlide } from './CarouselSlide';
+import CarouselSlide from './CarouselSlide';
+
+export default CarouselSlide;

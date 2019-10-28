@@ -1,16 +1,17 @@
 import React from 'react';
 import { node, func } from 'prop-types';
 
-const CarouselButton = props => <button {...props} />;
+const CarouselButton = props => {
+  return <button {...props} />;
+};
 
 CarouselButton.propTypes = {
   children: node.isRequired,
-  onClick: func
+  onClick: func.isRequired
 };
 
 CarouselButton.defaultProps = {
-  type: 'button',
-  children: 'I am a button'
+  type: 'button'
 };
 
 export default CarouselButton;

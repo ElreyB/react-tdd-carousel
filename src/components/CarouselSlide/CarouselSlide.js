@@ -1,8 +1,8 @@
 import React from 'react';
 import { string, node } from 'prop-types';
 
-const CarouselSlide = ({ className, description, imgLink, attribution }) => (
-  <figure className={className}>
+const CarouselSlide = ({ description, imgLink, attribution, ...rest }) => (
+  <figure {...rest}>
     <img src={imgLink} />
     <figcaption>
       <strong>{description}</strong> {attribution}

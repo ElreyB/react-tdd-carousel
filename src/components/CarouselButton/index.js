@@ -1,1 +1,3 @@
-export { default as CarouselButton } from './CarouselButton';
+import CarouselButton from './CarouselButton';
+
+export default CarouselButton;
