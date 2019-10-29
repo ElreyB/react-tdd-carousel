@@ -1,5 +1,5 @@
-import React from 'react';
-import { node, func } from 'prop-types';
+import React from "react";
+import { node, func } from "prop-types";
 
 const CarouselButton = props => {
   return <button {...props} />;
@@ -11,7 +11,7 @@ CarouselButton.propTypes = {
 };
 
 CarouselButton.defaultProps = {
-  type: 'button'
+  type: "button"
 };
 
 export default CarouselButton;

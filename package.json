@@ -7,13 +7,34 @@
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "styled-components": "^4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watch",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:js": "eslint . && prettier-eslint --list-different **/*.js",
+    "lint:css": "stylelint **/*.js",
+    "lint:fix": "eslint --fix .",
+    "lint": "yarn lint:js && yarn lint:css",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +53,18 @@
   },
   "devDependencies": {
     "@testing-library/react": "^9.3.0",
-    "jest-dom": "^4.0.0"
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.9",
+    "jest-dom": "^4.0.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "stylelint": "^11.1.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
   }
 }
