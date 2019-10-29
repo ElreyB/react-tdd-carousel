@@ -1,3 +1,5 @@
 **/*.test.js
 src/index.js
 src/serviceWorker.js
+src/.storybook/addons.js
+src/.storybook/config.js

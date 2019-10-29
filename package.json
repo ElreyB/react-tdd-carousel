@@ -19,7 +19,9 @@
     "lint:css": "stylelint **/*.js",
     "lint:fix": "eslint --fix .",
     "lint": "yarn lint:js && yarn lint:css",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "husky": {
     "hooks": {
@@ -52,6 +54,10 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5",
     "@testing-library/react": "^9.3.0",
     "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.6.0",
