@@ -75,5 +75,15 @@ export default [
     imgUrl:
       "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1080" +
       "&ixid=eyJhcHBfaWQiOjIzODE4fQ&s=966003791f746c210b73863cf6170e6c"
+  },
+  {
+    description: "Rio de Janeiro",
+    attribution: getAttribution({
+      name: "AgustÃ­n Diaz",
+      username: "agussdiaz28"
+    }),
+    imgUrl:
+      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1080" +
+      "&ixid=eyJhcHBfaWQiOjIzODE4fQ&s=966003791f746c210b73863cf6170e6c"
   }
 ];
